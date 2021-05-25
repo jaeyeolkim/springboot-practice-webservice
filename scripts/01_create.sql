@@ -1,25 +1,25 @@
-CREATE TABLE POSTS
+create table posts
 (
-    ID            BIGINT       NOT NULL AUTO_INCREMENT,
-    CREATED_DATE  DATETIME(6),
-    MODIFIED_DATE DATETIME(6),
-    AUTHOR        VARCHAR(255),
-    CONTENT       TEXT         NOT NULL,
-    TITLE         VARCHAR(500) NOT NULL,
-    PRIMARY KEY (ID)
-) ENGINE = INNODB;
+    id            bigint       not null auto_increment,
+    created_date  datetime(6),
+    modified_date datetime(6),
+    author        varchar(255),
+    content       text         not null,
+    title         varchar(500) not null,
+    primary key (id)
+) engine = innodb;
 
-CREATE TABLE USER
+create table user
 (
-    ID            BIGINT       NOT NULL AUTO_INCREMENT,
-    CREATED_DATE  DATETIME(6),
-    MODIFIED_DATE DATETIME(6),
-    EMAIL         VARCHAR(255) NOT NULL,
-    NAME          VARCHAR(255) NOT NULL,
-    PICTURE       VARCHAR(255),
-    ROLE          VARCHAR(255) NOT NULL,
-    PRIMARY KEY (ID)
-) ENGINE = INNODB;
+    id            bigint       not null auto_increment,
+    created_date  datetime(6),
+    modified_date datetime(6),
+    email         varchar(255) not null,
+    name          varchar(255) not null,
+    picture       varchar(255),
+    role          varchar(255) not null,
+    primary key (id)
+) engine = innodb;
 
 -- schema-mysql.sql(SPRING_SESSION)
 CREATE TABLE SPRING_SESSION
