@@ -8,13 +8,12 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL57Dialect
         storage_engine: innodb
-  datasource:
-    hikari:
-      jdbc-url: jdbc:h2:mem:testdb;MODE=MYSQL
-      username: sa
+#  datasource:
+#    url: jdbc:h2:mem:testdb;MODE=MYSQL
+#    username: sa
   profiles:
       group:
-        default: oauth
+        default: oauth,real-db
   # store-type: jdbc => 세션을 DB에서 관리한다. redis 선택 가능.
   session:
     store-type: jdbc
@@ -47,3 +46,15 @@ spring:
 #             # 기준이 되는 user_name 의 이름을 네이버에서는 response로 지정해야한다. (네이버 회원 조회시 반환되는 JSON 형태 때문이다)
 #             # response를 user_name으로 지정하고 이후 자바 코드로 response의 id를 user_name으로 지정한다. (스프링 시큐리티에서 하위 필드를 명시할 수 없기 때문)
 #             user_name_attribute: response
+
+
+# @TODO application-real-db.yml
+# spring:
+#   jpa:
+#     hibernate:
+#       ddl-auto: none
+#   datasource:
+#     url: jdbc:mariadb://192.168.100.148:3306/msaportal
+#     username: @TODO
+#     password: @TODO
+#     driver-class-name: org.mariadb.jdbc.Driver
