@@ -1,5 +1,8 @@
 # test 에서 application.yml 은 기본적으로 가져오지만, application-oauth.yml 등은 가져오지 않으므로 테스트 환경을 위한 설정을 해주어야 한다.
 spring:
+  h2:
+    console:
+      enabled: true
   jpa:
     show-sql: true
     properties:
@@ -7,9 +10,8 @@ spring:
         dialect: org.hibernate.dialect.MySQL57Dialect
         storage_engine: innodb
   datasource:
-    hikari:
-      jdbc-url: jdbc:h2:mem:testdb;MODE=MYSQL
-      username: sa
+    url: jdbc:h2:mem:testdb;MODE=MYSQL
+    username: sa
   # store-type: jdbc => 세션을 DB에서 관리한다. redis 선택 가능.
   session:
     store-type: jdbc
