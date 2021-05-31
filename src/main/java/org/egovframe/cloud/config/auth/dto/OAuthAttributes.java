@@ -5,6 +5,7 @@ import org.egovframe.cloud.domain.user.User;
 import lombok.Builder;
 import lombok.Getter;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @Getter
@@ -19,7 +20,9 @@ public class OAuthAttributes {
     public OAuthAttributes(Map<String, Object> attributes,
                            String nameAttributeKey, String name,
                            String email, String picture) {
-        this.attributes = attributes;
+        // public으로 선언된 데이터가 private 선언된 배열에 저장되지 않도록 한다.(reference가 아닌, “값”을 할당함으로써 private 멤버로서의 접근권한을 유지 시켜준다.)
+        this.attributes = new HashMap<>();
+        attributes.forEach((k, v) -> this.attributes.put(k, attributes.get(k)));
         this.nameAttributeKey = nameAttributeKey;
         this.name = name;
         this.email = email;
