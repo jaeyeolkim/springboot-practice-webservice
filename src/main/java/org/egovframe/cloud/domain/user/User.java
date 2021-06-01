@@ -7,13 +7,16 @@ import org.egovframe.cloud.domain.BaseTimeEntity;
 
 import javax.persistence.*;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 @Getter
 @NoArgsConstructor
 @Entity
 public class User extends BaseTimeEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = IDENTITY)
+//    @Column(name = "user_id")
     private Long id;
 
     @Column(nullable = false)
