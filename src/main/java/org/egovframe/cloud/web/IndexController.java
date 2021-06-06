@@ -1,12 +1,10 @@
 package org.egovframe.cloud.web;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import lombok.RequiredArgsConstructor;
 import org.egovframe.cloud.config.auth.LoginUser;
 import org.egovframe.cloud.config.auth.dto.SessionUser;
-import org.egovframe.cloud.domain.user.User;
 import org.egovframe.cloud.service.PostsService;
-import org.egovframe.cloud.web.dto.PostsResponseDto;
+import org.egovframe.cloud.api.dto.PostsResponseDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
