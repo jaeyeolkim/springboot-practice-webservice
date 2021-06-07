@@ -1,5 +1,7 @@
 package org.egovframe.cloud.domain.posts;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -13,4 +15,7 @@ public interface PostsRepository extends JpaRepository<Posts, Long> {
     // Spring Data Jpa 에서 제공하지 않는 메소드는 이렇게 쿼리로 작성할 수 있다
     @Query("SELECT p FROM Posts p ORDER BY p.id DESC")
     List<Posts> findAllDesc();
+
+    // paging
+    Page<Posts> findByTitleContainingIgnoreCase(String title, Pageable pageable);
 }
