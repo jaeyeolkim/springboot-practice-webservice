@@ -1,4 +1,4 @@
-package org.egovframe.cloud.api.dto;
+package org.egovframe.cloud.api.posts.dto;
 
 import lombok.Getter;
 import org.egovframe.cloud.domain.posts.Posts;

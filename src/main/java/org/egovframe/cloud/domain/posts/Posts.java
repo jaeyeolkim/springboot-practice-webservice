@@ -3,16 +3,19 @@ package org.egovframe.cloud.domain.posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.egovframe.cloud.domain.BaseTimeEntity;
+import org.egovframe.cloud.domain.BaseEntity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Getter // @Setter 는 만들지 않는다. 값의 변경은 목적과 의도를 나타낼 수 있는 public 메소드를 만들어 처리한다.
 @NoArgsConstructor // 기본 생성자 추가
 @Entity
-public class Posts extends BaseTimeEntity {
+public class Posts extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)

@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.egovframe.cloud.config.auth.LoginUser;
 import org.egovframe.cloud.config.auth.dto.SessionUser;
 import org.egovframe.cloud.service.PostsService;
-import org.egovframe.cloud.api.dto.PostsResponseDto;
+import org.egovframe.cloud.api.posts.dto.PostsResponseDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

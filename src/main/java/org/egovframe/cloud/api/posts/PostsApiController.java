@@ -1,11 +1,11 @@
-package org.egovframe.cloud.api;
+package org.egovframe.cloud.api.posts;
 
 import lombok.RequiredArgsConstructor;
 import org.egovframe.cloud.service.PostsService;
-import org.egovframe.cloud.api.dto.PostsListResponseDto;
-import org.egovframe.cloud.api.dto.PostsResponseDto;
-import org.egovframe.cloud.api.dto.PostsSaveRequestDto;
-import org.egovframe.cloud.api.dto.PostsUpdateRequestDto;
+import org.egovframe.cloud.api.posts.dto.PostsListResponseDto;
+import org.egovframe.cloud.api.posts.dto.PostsResponseDto;
+import org.egovframe.cloud.api.posts.dto.PostsSaveRequestDto;
+import org.egovframe.cloud.api.posts.dto.PostsUpdateRequestDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

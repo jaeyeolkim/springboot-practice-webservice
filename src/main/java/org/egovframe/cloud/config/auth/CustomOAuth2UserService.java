@@ -1,10 +1,10 @@
 package org.egovframe.cloud.config.auth;
 
+import lombok.RequiredArgsConstructor;
 import org.egovframe.cloud.config.auth.dto.OAuthAttributes;
 import org.egovframe.cloud.config.auth.dto.SessionUser;
 import org.egovframe.cloud.domain.user.User;
 import org.egovframe.cloud.domain.user.UserRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;

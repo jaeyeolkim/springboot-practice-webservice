@@ -3,10 +3,10 @@ package org.egovframe.cloud.service;
 import lombok.RequiredArgsConstructor;
 import org.egovframe.cloud.domain.posts.Posts;
 import org.egovframe.cloud.domain.posts.PostsRepository;
-import org.egovframe.cloud.api.dto.PostsListResponseDto;
-import org.egovframe.cloud.api.dto.PostsResponseDto;
-import org.egovframe.cloud.api.dto.PostsSaveRequestDto;
-import org.egovframe.cloud.api.dto.PostsUpdateRequestDto;
+import org.egovframe.cloud.api.posts.dto.PostsListResponseDto;
+import org.egovframe.cloud.api.posts.dto.PostsResponseDto;
+import org.egovframe.cloud.api.posts.dto.PostsSaveRequestDto;
+import org.egovframe.cloud.api.posts.dto.PostsUpdateRequestDto;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

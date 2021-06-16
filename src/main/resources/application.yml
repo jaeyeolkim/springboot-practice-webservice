@@ -16,8 +16,11 @@ spring:
   session:
     store-type: jdbc
 
-logging.level:
-  org.hibernate.SQL: debug
+logging:
+  level:
+    root: info
+    org.springframework.web: error
+    org.hibernate.SQL: debug
 
 # @TODO application-oauth.yml
 # https://console.cloud.google.com
